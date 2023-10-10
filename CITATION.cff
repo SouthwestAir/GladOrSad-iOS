@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: GladOrSad
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - name: Technology Innovation
+    affiliation: Southwest Airlines
+identifiers:
+  - type: url
+    value: 'https://southwest.com'
+    description: Southwest Airlines
+repository-code: 'https://github.com/SouthwestAir/GladOrSad/'
+url: 'https://southwest.com'
+abstract: >-
+  Public feedback collection tool for iOS
+keywords:
+  - iOS
+  - Swift
+license: BSD-3-Clause
+version: '1.0'
+date-released: '2023-10-26'

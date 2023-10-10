@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		742EDC662AD5DAC000CCF8B9 /* GladOrSad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 742EDC642AD5DAC000CCF8B9 /* GladOrSad.xcdatamodeld */; };
+		74AF68192A4DF1C5004A3BEB /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AF68182A4DF1C5004A3BEB /* RatingView.swift */; };
+		74AF681B2A4DF1DE004A3BEB /* Color-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AF681A2A4DF1DE004A3BEB /* Color-extension.swift */; };
+		74E13C762A82EFE8004D8F52 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E13C752A82EFE8004D8F52 /* SettingsTextField.swift */; };
+		EF0DBC992A80AA700007C3FC /* ThankyouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DBC982A80AA700007C3FC /* ThankyouView.swift */; };
+		EF0DBC9C2A81244F0007C3FC /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DBC9B2A81244F0007C3FC /* UploadDataManager.swift */; };
+		EF13BBFF2A776FBA002C7968 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13BBFE2A776FBA002C7968 /* SettingsViewModel.swift */; };
+		EF13BC022A77E1A9002C7968 /* SettingsButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13BC012A77E1A9002C7968 /* SettingsButtonViewModel.swift */; };
+		EF7727DE2A378AA600C6FFCC /* GladOrSad_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7727DD2A378AA600C6FFCC /* GladOrSad_iOSApp.swift */; };
+		EF7727E22A378AA800C6FFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7727E12A378AA800C6FFCC /* Assets.xcassets */; };
+		EF90524C2A5309A40048C06B /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF90524B2A5309A40048C06B /* AdminView.swift */; };
+		EF9052532A5613DA0048C06B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9052522A5613DA0048C06B /* DataManager.swift */; };
+		EF9052552A5C42B70048C06B /* SWAColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9052542A5C42B70048C06B /* SWAColors.xcassets */; };
+		EF9052572A6EBB6B0048C06B /* NewButtonDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9052562A6EBB6B0048C06B /* NewButtonDialogView.swift */; };
+		EF9052592A6EEA5C0048C06B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9052582A6EEA5C0048C06B /* ImagePicker.swift */; };
+		EFAFF7462A99228500B54BE4 /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFF7452A99228500B54BE4 /* EnvironmentService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		742EDC652AD5DAC000CCF8B9 /* GladOrSad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GladOrSad.xcdatamodel; sourceTree = "<group>"; };
+		74AF68182A4DF1C5004A3BEB /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		74AF681A2A4DF1DE004A3BEB /* Color-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-extension.swift"; sourceTree = "<group>"; };
+		74E13C752A82EFE8004D8F52 /* SettingsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
+		EF0DBC982A80AA700007C3FC /* ThankyouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankyouView.swift; sourceTree = "<group>"; };
+		EF0DBC9B2A81244F0007C3FC /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
+		EF13BBFE2A776FBA002C7968 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		EF13BC012A77E1A9002C7968 /* SettingsButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonViewModel.swift; sourceTree = "<group>"; };
+		EF7727DA2A378AA600C6FFCC /* GladOrSad-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GladOrSad-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7727DD2A378AA600C6FFCC /* GladOrSad_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GladOrSad_iOSApp.swift; sourceTree = "<group>"; };
+		EF7727E12A378AA800C6FFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF90524B2A5309A40048C06B /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		EF9052522A5613DA0048C06B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EF9052542A5C42B70048C06B /* SWAColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SWAColors.xcassets; sourceTree = "<group>"; };
+		EF9052562A6EBB6B0048C06B /* NewButtonDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtonDialogView.swift; sourceTree = "<group>"; };
+		EF9052582A6EEA5C0048C06B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EFAFF7452A99228500B54BE4 /* EnvironmentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7727D72A378AA600C6FFCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74AF681F2A4DF208004A3BEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74AF681A2A4DF1DE004A3BEB /* Color-extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74AF68202A4DF20F004A3BEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74AF68182A4DF1C5004A3BEB /* RatingView.swift */,
+				EF90524B2A5309A40048C06B /* AdminView.swift */,
+				EF9052562A6EBB6B0048C06B /* NewButtonDialogView.swift */,
+				EF9052582A6EEA5C0048C06B /* ImagePicker.swift */,
+				EF0DBC982A80AA700007C3FC /* ThankyouView.swift */,
+				74E13C772A82F1C7004D8F52 /* ChildViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74E13C772A82F1C7004D8F52 /* ChildViews */ = {
+			isa = PBXGroup;
+			children = (
+				74E13C752A82EFE8004D8F52 /* SettingsTextField.swift */,
+			);
+			path = ChildViews;
+			sourceTree = "<group>";
+		};
+		EF0DBC9A2A8124210007C3FC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EF9052522A5613DA0048C06B /* DataManager.swift */,
+				EF0DBC9B2A81244F0007C3FC /* UploadDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EF13BC002A776FC4002C7968 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF13BBFE2A776FBA002C7968 /* SettingsViewModel.swift */,
+				EF13BC012A77E1A9002C7968 /* SettingsButtonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF7727D12A378AA600C6FFCC = {
+			isa = PBXGroup;
+			children = (
+				EF7727DC2A378AA600C6FFCC /* GladOrSad-iOS */,
+				EF7727DB2A378AA600C6FFCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7727DB2A378AA600C6FFCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7727DA2A378AA600C6FFCC /* GladOrSad-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7727DC2A378AA600C6FFCC /* GladOrSad-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EFAFF7452A99228500B54BE4 /* EnvironmentService.swift */,
+				EF7727DD2A378AA600C6FFCC /* GladOrSad_iOSApp.swift */,
+				742EDC642AD5DAC000CCF8B9 /* GladOrSad.xcdatamodeld */,
+				EF0DBC9A2A8124210007C3FC /* Manager */,
+				EF13BC002A776FC4002C7968 /* ViewModel */,
+				74AF68202A4DF20F004A3BEB /* Views */,
+				74AF681F2A4DF208004A3BEB /* Extensions */,
+				EF7727E12A378AA800C6FFCC /* Assets.xcassets */,
+				EF9052542A5C42B70048C06B /* SWAColors.xcassets */,
+			);
+			path = "GladOrSad-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7727D92A378AA600C6FFCC /* GladOrSad-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7727FE2A378AA800C6FFCC /* Build configuration list for PBXNativeTarget "GladOrSad-iOS" */;
+			buildPhases = (
+				EF7727D62A378AA600C6FFCC /* Sources */,
+				EF7727D72A378AA600C6FFCC /* Frameworks */,
+				EF7727D82A378AA600C6FFCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GladOrSad-iOS";
+			packageProductDependencies = (
+			);
+			productName = "GladOrSad-iOS";
+			productReference = EF7727DA2A378AA600C6FFCC /* GladOrSad-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7727D22A378AA600C6FFCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EF7727D92A378AA600C6FFCC = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = EF7727D52A378AA600C6FFCC /* Build configuration list for PBXProject "GladOrSad-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7727D12A378AA600C6FFCC;
+			packageReferences = (
+			);
+			productRefGroup = EF7727DB2A378AA600C6FFCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7727D92A378AA600C6FFCC /* GladOrSad-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF7727D82A378AA600C6FFCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9052552A5C42B70048C06B /* SWAColors.xcassets in Resources */,
+				EF7727E22A378AA800C6FFCC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7727D62A378AA600C6FFCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E13C762A82EFE8004D8F52 /* SettingsTextField.swift in Sources */,
+				EF13BC022A77E1A9002C7968 /* SettingsButtonViewModel.swift in Sources */,
+				EF9052532A5613DA0048C06B /* DataManager.swift in Sources */,
+				EF9052592A6EEA5C0048C06B /* ImagePicker.swift in Sources */,
+				74AF68192A4DF1C5004A3BEB /* RatingView.swift in Sources */,
+				742EDC662AD5DAC000CCF8B9 /* GladOrSad.xcdatamodeld in Sources */,
+				74AF681B2A4DF1DE004A3BEB /* Color-extension.swift in Sources */,
+				EF7727DE2A378AA600C6FFCC /* GladOrSad_iOSApp.swift in Sources */,
+				EF0DBC992A80AA700007C3FC /* ThankyouView.swift in Sources */,
+				EF9052572A6EBB6B0048C06B /* NewButtonDialogView.swift in Sources */,
+				EF0DBC9C2A81244F0007C3FC /* UploadDataManager.swift in Sources */,
+				EF13BBFF2A776FBA002C7968 /* SettingsViewModel.swift in Sources */,
+				EFAFF7462A99228500B54BE4 /* EnvironmentService.swift in Sources */,
+				EF90524C2A5309A40048C06B /* AdminView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EF7727FC2A378AA800C6FFCC /* Debug Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug Dev";
+		};
+		EF7727FD2A378AA800C6FFCC /* Release Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Dev";
+		};
+		EF7727FF2A378AA800C6FFCC /* Debug Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Glad Or Sad";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "GladOrSad needs access to your photo library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swa.innovationlabs.gladorsad.GladOrSad-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = "Debug Dev";
+		};
+		EF7728002A378AA800C6FFCC /* Release Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Glad or Sad";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "GladOrSad needs access to your photo library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swa.innovationlabs.gladorsad.GladOrSad-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = "Release Dev";
+		};
+		EFAFF73D2A9921D100B54BE4 /* Debug Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug Prod";
+		};
+		EFAFF73E2A9921D100B54BE4 /* Debug Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Glad or Sad";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "GladOrSad needs access to your photo library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swa.innovationlabs.gladorsad.GladOrSad-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = "Debug Prod";
+		};
+		EFAFF7412A9921E000B54BE4 /* Release Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Prod";
+		};
+		EFAFF7422A9921E000B54BE4 /* Release Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Glad Or Sad";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "GladOrSad needs access to your photo library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swa.innovationlabs.gladorsad.GladOrSad-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = "Release Prod";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7727D52A378AA600C6FFCC /* Build configuration list for PBXProject "GladOrSad-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7727FC2A378AA800C6FFCC /* Debug Dev */,
+				EFAFF73D2A9921D100B54BE4 /* Debug Prod */,
+				EF7727FD2A378AA800C6FFCC /* Release Dev */,
+				EFAFF7412A9921E000B54BE4 /* Release Prod */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release Dev";
+		};
+		EF7727FE2A378AA800C6FFCC /* Build configuration list for PBXNativeTarget "GladOrSad-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7727FF2A378AA800C6FFCC /* Debug Dev */,
+				EFAFF73E2A9921D100B54BE4 /* Debug Prod */,
+				EF7728002A378AA800C6FFCC /* Release Dev */,
+				EFAFF7422A9921E000B54BE4 /* Release Prod */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release Dev";
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		742EDC642AD5DAC000CCF8B9 /* GladOrSad.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				742EDC652AD5DAC000CCF8B9 /* GladOrSad.xcdatamodel */,
+			);
+			currentVersion = 742EDC652AD5DAC000CCF8B9 /* GladOrSad.xcdatamodel */;
+			path = GladOrSad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF7727D22A378AA600C6FFCC /* Project object */;
+}
