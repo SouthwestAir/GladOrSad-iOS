@@ -40,17 +40,17 @@ class EnvironmentService: NSObject {
     var presignedUrl: String {
         switch environment {
         case .dev, .qa:
-            return "REPLACE-WITH-URL/putFile"
+            return "https://h0j2q2mn1g.execute-api.us-east-1.amazonaws.com/dev/requests/putFile"
         case .prod:
-            return "REPLACE-WITH-URL/putFile"
+            return "https://wtwiwzl9n0.execute-api.us-east-1.amazonaws.com/prod/requests/putFile"
         }
     }
     var apiKey: String {
         switch environment {
         case .dev, .qa:
-            return "REPLACE-WITH-API-KEY-TO-AWS"
+            return "ANJpcZ8TVA3RnMM6yQF1N7BJhrHmMWbs1KSuIzhb"
         case .prod:
-            return "REPLACE-WITH-API-KEY-TO-AWS"
+            return "mIrx94vUWG3GMmttv5vQ27MTDdRMlwdU2mQwhQnW"
         }
     }
     
