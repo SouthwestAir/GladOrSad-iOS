@@ -23,6 +23,7 @@
 		EF9052572A6EBB6B0048C06B /* NewButtonDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9052562A6EBB6B0048C06B /* NewButtonDialogView.swift */; };
 		EF9052592A6EEA5C0048C06B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9052582A6EEA5C0048C06B /* ImagePicker.swift */; };
 		EFAFF7462A99228500B54BE4 /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFF7452A99228500B54BE4 /* EnvironmentService.swift */; };
+		EFF259492B59BCC000418595 /* DONOT_COMMIT_env.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF259482B59BCC000418595 /* DONOT_COMMIT_env.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		EF9052562A6EBB6B0048C06B /* NewButtonDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtonDialogView.swift; sourceTree = "<group>"; };
 		EF9052582A6EEA5C0048C06B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		EFAFF7452A99228500B54BE4 /* EnvironmentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
+		EFF259482B59BCC000418595 /* DONOT_COMMIT_env.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DONOT_COMMIT_env.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				74AF681F2A4DF208004A3BEB /* Extensions */,
 				EF7727E12A378AA800C6FFCC /* Assets.xcassets */,
 				EF9052542A5C42B70048C06B /* SWAColors.xcassets */,
+				EFF259482B59BCC000418595 /* DONOT_COMMIT_env.plist */,
 			);
 			path = "GladOrSad-iOS";
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9052552A5C42B70048C06B /* SWAColors.xcassets in Resources */,
+				EFF259492B59BCC000418595 /* DONOT_COMMIT_env.plist in Resources */,
 				EF7727E22A378AA800C6FFCC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
