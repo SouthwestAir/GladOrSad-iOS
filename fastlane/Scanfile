@@ -1,0 +1,3 @@
+devices([ ENV['SIMULATOR_DEVICE'] ])
+scheme(ENV['SCHEME_CI'])
+code_coverage true

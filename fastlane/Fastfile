@@ -1,0 +1,7 @@
+#!ruby
+
+import_from_git(
+  url: 'git@github.com:SWATechInnovation/Fastlane-Scripts.git',
+  branch: 'ios-1.10',
+  path: 'ios/Fastfile'
+)
