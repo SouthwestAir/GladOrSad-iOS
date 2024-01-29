@@ -1,6 +1,9 @@
 name: Prevent File Change Workflow
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  pull_request:
+    types:
+      - opened
 jobs:
   Prevent-File-Change:
     runs-on: ubuntu-latest
