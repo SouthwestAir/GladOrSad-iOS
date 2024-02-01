@@ -35,7 +35,7 @@
 		EF0DBC9B2A81244F0007C3FC /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
 		EF13BBFE2A776FBA002C7968 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		EF13BC012A77E1A9002C7968 /* SettingsButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonViewModel.swift; sourceTree = "<group>"; };
-		EF7727DA2A378AA600C6FFCC /* GladOrSad-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GladOrSad-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7727DA2A378AA600C6FFCC /* GladOrSad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GladOrSad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7727DD2A378AA600C6FFCC /* GladOrSad_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GladOrSad_iOSApp.swift; sourceTree = "<group>"; };
 		EF7727E12A378AA800C6FFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF90524B2A5309A40048C06B /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		EF7727DB2A378AA600C6FFCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF7727DA2A378AA600C6FFCC /* GladOrSad-iOS.app */,
+				EF7727DA2A378AA600C6FFCC /* GladOrSad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EF7727D92A378AA600C6FFCC /* GladOrSad-iOS */ = {
+		EF7727D92A378AA600C6FFCC /* GladOrSad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF7727FE2A378AA800C6FFCC /* Build configuration list for PBXNativeTarget "GladOrSad-iOS" */;
+			buildConfigurationList = EF7727FE2A378AA800C6FFCC /* Build configuration list for PBXNativeTarget "GladOrSad" */;
 			buildPhases = (
 				EF7727D62A378AA600C6FFCC /* Sources */,
 				EF7727D72A378AA600C6FFCC /* Frameworks */,
@@ -153,11 +153,11 @@
 			);
 			dependencies = (
 			);
-			name = "GladOrSad-iOS";
+			name = GladOrSad;
 			packageProductDependencies = (
 			);
 			productName = "GladOrSad-iOS";
-			productReference = EF7727DA2A378AA600C6FFCC /* GladOrSad-iOS.app */;
+			productReference = EF7727DA2A378AA600C6FFCC /* GladOrSad.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF7727D92A378AA600C6FFCC /* GladOrSad-iOS */,
+				EF7727D92A378AA600C6FFCC /* GladOrSad */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				DEVELOPMENT_TEAM = 93497N36FA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
@@ -393,7 +393,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				DEVELOPMENT_TEAM = 93497N36FA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
@@ -491,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				DEVELOPMENT_TEAM = 93497N36FA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
@@ -583,7 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = T4VXPLC8GZ;
+				DEVELOPMENT_TEAM = 93497N36FA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GladOrSad-iOS/Info.plist";
@@ -627,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release Dev";
 		};
-		EF7727FE2A378AA800C6FFCC /* Build configuration list for PBXNativeTarget "GladOrSad-iOS" */ = {
+		EF7727FE2A378AA800C6FFCC /* Build configuration list for PBXNativeTarget "GladOrSad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF7727FF2A378AA800C6FFCC /* Debug Dev */,

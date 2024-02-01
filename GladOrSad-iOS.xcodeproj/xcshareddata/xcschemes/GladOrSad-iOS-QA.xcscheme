@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EF7727D92A378AA600C6FFCC"
-               BuildableName = "GladOrSad-iOS.app"
-               BlueprintName = "GladOrSad-iOS"
+               BuildableName = "GladOrSad.app"
+               BlueprintName = "GladOrSad"
                ReferencedContainer = "container:GladOrSad-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EF7727D92A378AA600C6FFCC"
-            BuildableName = "GladOrSad-iOS.app"
-            BlueprintName = "GladOrSad-iOS"
+            BuildableName = "GladOrSad.app"
+            BlueprintName = "GladOrSad"
             ReferencedContainer = "container:GladOrSad-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EF7727D92A378AA600C6FFCC"
-            BuildableName = "GladOrSad-iOS.app"
-            BlueprintName = "GladOrSad-iOS"
+            BuildableName = "GladOrSad.app"
+            BlueprintName = "GladOrSad"
             ReferencedContainer = "container:GladOrSad-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
