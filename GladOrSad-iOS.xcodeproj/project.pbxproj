@@ -13,7 +13,6 @@
 		EF7727E22A378AA800C6FFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7727E12A378AA800C6FFCC /* Assets.xcassets */; };
 		EF9052552A5C42B70048C06B /* SWAColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9052542A5C42B70048C06B /* SWAColors.xcassets */; };
 		EFAFF7462A99228500B54BE4 /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFF7452A99228500B54BE4 /* EnvironmentService.swift */; };
-		EFF259492B59BCC000418595 /* DONOT_COMMIT_env.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF259482B59BCC000418595 /* DONOT_COMMIT_env.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		EF7727E12A378AA800C6FFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9052542A5C42B70048C06B /* SWAColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SWAColors.xcassets; sourceTree = "<group>"; };
 		EFAFF7452A99228500B54BE4 /* EnvironmentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
-		EFF259482B59BCC000418595 /* DONOT_COMMIT_env.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DONOT_COMMIT_env.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,7 +78,6 @@
 				74CC0C1D2F26EE7900E2B8F1 /* Views */,
 				EF7727E12A378AA800C6FFCC /* Assets.xcassets */,
 				EF9052542A5C42B70048C06B /* SWAColors.xcassets */,
-				EFF259482B59BCC000418595 /* DONOT_COMMIT_env.plist */,
 			);
 			path = "GladOrSad-iOS";
 			sourceTree = "<group>";
@@ -156,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9052552A5C42B70048C06B /* SWAColors.xcassets in Resources */,
-				EFF259492B59BCC000418595 /* DONOT_COMMIT_env.plist in Resources */,
 				EF7727E22A378AA800C6FFCC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
