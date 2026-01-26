@@ -55,18 +55,12 @@ class EnvironmentService: NSObject {
         buildConfiguration = env
 
         do {
-            print("Loading DONOT_COMMIT_env.plist")
             guard let path = Bundle.main.path(forResource: "DONOT_COMMIT_env", ofType: "plist") else {
-                print("Error: DONOT_COMMIT_env.plist cannot be loaded (file not found).")
                 return
             }
             let url = URL(filePath: path)
             plist = try PropertyListSerialization.propertyList(from: Data(contentsOf: url), format: nil) as? [String: String]
-            if plist == nil {
-                print("Error: DONOT_COMMIT_env.plist cannot be loaded (invalid format).")
-            }
         } catch {
-            print("Error: DONOT_COMMIT_env.plist cannot be loaded (\(error)).")
             plist = [String:String]()
         }
     }
