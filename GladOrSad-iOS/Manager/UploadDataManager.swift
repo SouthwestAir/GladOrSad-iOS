@@ -8,6 +8,16 @@
 import Foundation
 import CoreData
 
+enum UploadDataError: Error {
+    // these only get logged as \(error.localizedDescription), so no special case is needed to handle them
+    // feel free to add as needed
+    case urlMissing
+    case urlFailed
+    case csvGenerationFailed
+    case csvUploadFailed
+    case dataCleanupFailed
+}
+
 struct UploadUrl: Decodable {
     var url: String?
     var expires: Int?
@@ -26,63 +36,103 @@ public class UploadDataManager {
     let dateFormatter = DateFormatter()
     
     var uploadUrl: UploadUrl?
+    var csvData: String?
     
 }
 
 extension UploadDataManager {
-    func createAndUploadCsv(dataContext: NSManagedObjectContext, callback: @escaping ()->Void) {
+    func formatUnixDate(from unix: Int64) -> String {
+        let isMilliseconds = unix > 9_999_999_999
+        let seconds = isMilliseconds ? TimeInterval(unix) / 1000.0 : TimeInterval(unix)
+        let date = Date(timeIntervalSince1970: seconds)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm a"
+        dateFormatter.timeZone = TimeZone(identifier: "America/Chicago")
+        return (dateFormatter.string(from: date))
+    }
+    
+    func generateCsvData(from context: NSManagedObjectContext) -> String? {
         let fetchRequest: NSFetchRequest<QuizResponse> = NSFetchRequest(entityName: "QuizResponse")
         
         do {
-            var csvData = ""
+            csvData = ""
             let csvHead = "\"Device Name\",\"Quiz Name\",\"Location\",\"Quiz Time\",\"Quiz Caption\",\"Quiz Prompt\",\"Selected Index\",\"Selected Name\",\"Selected Title\"\n"
-            csvData.append(csvHead)
-            let result = try dataContext.fetch(fetchRequest)
+            csvData?.append(csvHead)
+            let result = try context.fetch(fetchRequest)
             result.forEach { testResponse in
-                csvData.append("\"\(testResponse.deviceName ?? "")\",\"\(testResponse.quizName ?? "")\",\"\(testResponse.location ?? "")\",\"\(testResponse.quizTime)\",\"\(testResponse.quizCaption ?? "")\",\"\(testResponse.quizPrompt ?? "")\",\"\(testResponse.selectedIndex)\",\"\(testResponse.selectedName ?? "")\",\"\(testResponse.selectedTitle ?? "")\"\n")
+                csvData?.append("\"\(testResponse.deviceName ?? "")\",\"\(testResponse.quizName ?? "")\",\"\(testResponse.location ?? "")\",\"\(formatUnixDate(from: testResponse.quizTime))\",\"\(testResponse.quizCaption ?? "")\",\"\(testResponse.quizPrompt ?? "")\",\"\(testResponse.selectedIndex)\",\"\(testResponse.selectedName ?? "")\",\"\(testResponse.selectedTitle ?? "")\"\n")
             }
-            dateFormatter.dateFormat = "YYYY-MM-DD"
-            let now = Date()
-            let formattedDay = dateFormatter.string(from: now)
-            dateFormatter.dateFormat = "HH-mm"
-            let formattedHourAndMin = dateFormatter.string(from: now)
-            
-            let fileName = "\(formattedDay)/QuizUpload_\(formattedHourAndMin).csv"
-            
-            if let data = csvData.data(using: .utf8) {
-                uploadToS3(file: data, forPath: fileName) {
-                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "QuizResponse")
-                    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-                    do {
-                        try dataContext.execute(batchDeleteRequest)
-                        try dataContext.save()
-                    } catch {
-                        print("Delete all in table QuizResponse failed!")
-                    }
-                    callback()
-                }
-            }
+            return csvData
         } catch {
-            print("Error selecting QuizResponses from database")
+            print("Error loading QuizResponses from database")
+            return nil
+        }
+    }
+    
+    func createAndUploadCsv(dataContext: NSManagedObjectContext, callback: @escaping (UploadDataError?)->Void) {
+        let fetchRequest: NSFetchRequest<QuizResponse> = NSFetchRequest(entityName: "QuizResponse")
+        
+        guard let csvData = UploadDataManager.shared.generateCsvData(from: dataContext) else {
+            callback(UploadDataError.csvGenerationFailed)
+            return
+        }
+        
+        print (csvData)
+        
+        dateFormatter.dateFormat = "YYYY-MM-DD"
+        let now = Date()
+        let formattedDay = dateFormatter.string(from: now)
+        dateFormatter.dateFormat = "HH-mm"
+        let formattedHourAndMin = dateFormatter.string(from: now)
+        
+        let fileName = "\(formattedDay)/QuizUpload_\(formattedHourAndMin).csv"
+        
+        if let data = csvData.data(using: .utf8) {
+            uploadToS3(file: data, forPath: fileName) { error in
+                if let error = error {
+                    callback(error)
+                    return
+                }
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "QuizResponse")
+                let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                do {
+                    try dataContext.execute(batchDeleteRequest)
+                    try dataContext.save()
+                } catch {
+                    callback(UploadDataError.dataCleanupFailed)
+                    print("Delete all in table QuizResponse failed!")
+                }
+                callback(nil)
+            }
         }
     }
 }
 
 extension UploadDataManager {
-    func uploadToS3(file: Data, forPath: String, callback: @escaping ()->Void) {
+    func uploadToS3(file: Data, forPath: String, callback: @escaping (UploadDataError?)->Void) {
         guard let uploadUrl, let dateExpires = uploadUrl.dateExpires, Date() < dateExpires else {
-            getUrl(forFile: forPath) {
-                self.uploadCsv(csv: file) {
-                    callback()
+            getUrl(forFile: forPath) { error in
+                if let error = error {
+                    callback(error)
+                    return
+                }
+                self.uploadCsv(csv: file) { error in
+                    callback(nil)
                 }
             }
             return
         }
-        uploadCsv(csv: file) {
-            callback()
+        uploadCsv(csv: file) { error in
+            if let error = error {
+                callback(error)
+                return
+            }
+            callback(nil)
         }
     }
-    private func getUrl(forFile: String, callback: @escaping () -> Void) {
+    private func getUrl(forFile: String, callback: @escaping (UploadDataError?) -> Void) {
         let serviceUrl = EnvironmentService.shared.presignedUrl
         let headers: [String: String] = [
             "x-api-key": EnvironmentService.shared.apiKey,
@@ -97,13 +147,13 @@ extension UploadDataManager {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 print("GET URL FAILED: \(error)")
-                callback()
+                callback(UploadDataError.urlFailed)
                 return
             }
             
             if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
                 print("Server returned status code other than 2xx: \(httpResponse.statusCode)")
-                callback()
+                callback(UploadDataError.urlFailed)
                 return
             }
 
@@ -111,14 +161,14 @@ extension UploadDataManager {
                 self.uploadUrl = UploadUrl()
                 self.uploadUrl?.url = String(data: data, encoding: .utf8)
             }
-            callback()
+            callback(nil)
         }
         task.resume()
     }
 
-    private func uploadCsv(csv: Data, callback: @escaping ()->Void) {
+    private func uploadCsv(csv: Data, callback: @escaping (UploadDataError?)->Void) {
         guard let uploadUrl = self.uploadUrl, let url = uploadUrl.url, let presignedUrl = URL(string: url) else {
-            callback()
+            callback(UploadDataError.urlMissing)
             return
         }
         
@@ -132,13 +182,13 @@ extension UploadDataManager {
                     print("error: " + String(data: data, encoding: String.Encoding.utf8)!)
                 }
                 print(error)
-                callback()
+                callback(UploadDataError.csvUploadFailed)
                 return
             }
             
             if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
                 print("Server returned status code other than 2xx: \(httpResponse.statusCode)")
-                callback()
+                callback(UploadDataError.csvUploadFailed)
                 return
             }
 
@@ -146,7 +196,7 @@ extension UploadDataManager {
                 let responseString = String(data: data, encoding: .utf8)
                 print(responseString ?? "")
             }
-            callback()
+            callback(nil)
         }
         task.resume()
     }

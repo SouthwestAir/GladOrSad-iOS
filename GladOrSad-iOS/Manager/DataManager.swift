@@ -51,6 +51,7 @@ class DataManager: ObservableObject {
             settings.deviceName = ""
             settings.quizName = ""
             settings.location = ""
+            settings.maxColumns = 5
             settings.background = Color("SWA-BoldBlue").toHex()
             settings.captionColor = Color("SWA-White").toHex()
             settings.promptColor = Color("SWA-White").toHex()

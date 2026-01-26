@@ -27,6 +27,7 @@ enum EnvironmentType: String {
 class EnvironmentService: NSObject {
     static let shared = EnvironmentService()
     var buildConfiguration: BuildConfiguration
+    var plist: [String: String]?
     var environment: EnvironmentType {
         switch buildConfiguration {
         case .debugDev, .releaseDev:
@@ -38,20 +39,11 @@ class EnvironmentService: NSObject {
         }
     }
     var presignedUrl: String {
-        switch environment {
-        case .dev, .qa:
-            return "REPLACE-WITH-URL/putFile"
-        case .prod:
-            return "REPLACE-WITH-URL/putFile"
-        }
+        return plist?["\(environment.rawValue)_upload_file_url"] ?? "REPLACE-WITH-URL/putFile"
     }
+    
     var apiKey: String {
-        switch environment {
-        case .dev, .qa:
-            return "REPLACE-WITH-API-KEY-TO-AWS"
-        case .prod:
-            return "REPLACE-WITH-API-KEY-TO-AWS"
-        }
+        return plist?["\(environment.rawValue)_service_key"] ?? "REPLACE-WITH-API-KEY-TO-AWS"
     }
     
     private override init() {
@@ -61,6 +53,22 @@ class EnvironmentService: NSObject {
             return
         }
         buildConfiguration = env
+
+        do {
+            print("Loading DONOT_COMMIT_env.plist")
+            guard let path = Bundle.main.path(forResource: "DONOT_COMMIT_env", ofType: "plist") else {
+                print("Error: DONOT_COMMIT_env.plist cannot be loaded (file not found).")
+                return
+            }
+            let url = URL(filePath: path)
+            plist = try PropertyListSerialization.propertyList(from: Data(contentsOf: url), format: nil) as? [String: String]
+            if plist == nil {
+                print("Error: DONOT_COMMIT_env.plist cannot be loaded (invalid format).")
+            }
+        } catch {
+            print("Error: DONOT_COMMIT_env.plist cannot be loaded (\(error)).")
+            plist = [String:String]()
+        }
     }
     
 }

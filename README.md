@@ -1,5 +1,5 @@
 # 😊/😢 GladOrSad-iOS
-
+hi
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) 
 
 [![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)](https://developer.apple.com)
@@ -71,32 +71,43 @@ We're always innovating! On our "to do" list are a number of enhancements, such 
 
 The following members of Technology Innovation contributed to this project:
 
-| ![Matthew Barkley](screenshots/avatar_matthew_barkley.jpg) |
-| :---: | 
-| Matthew Barkley |
-| [![matthewbarkley](https://raster.shields.io/badge/linkedin-%40matthewbarkley-lightblue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/matthewbarkley/) |
+<table>
+  <tr>
+    <td align="center" width="200">
+      <img src="screenshots/avatar_matthew_barkley.jpg" width="96" alt="Matthew Barkley" /><br />
+      <b>Matthew Barkley</b><br />
+      <a href="https://www.linkedin.com/in/matthewbarkley/">LinkedIn</a>
+    </td>
+    <td align="center" width="200">
+      <img src="screenshots/avatar_sierra_dugan.jpg" width="96" alt="Sierra Dugan" /><br />
+      <b>Sierra Dugan</b><br />
+      <a href="https://www.linkedin.com/in/sierradugandesign/">LinkedIn</a>
+    </td>
+    <td align="center" width="200">
+      <img src="screenshots/avatar_michael_roth.png" width="96" alt="Michael Roth" /><br />
+      <b>Michael Roth</b><br />
+      <a href="https://www.linkedin.com/in/michael-roth-7106b91/">LinkedIn</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="200">
+      <img src="screenshots/avatar_jeffrey_berthiaume.png" width="96" alt="Jeffrey Berthiaume" /><br />
+      <b>Jeffrey Berthiaume</b><br />
+      <a href="https://twitter.com/jeffreality">X</a> ·
+      <a href="https://linkedin.com/in/jeffreality">LinkedIn</a> ·
+      <a href="https://stackoverflow.com/users/71607/jeffrey-berthiaume">Stack Overflow</a>
+    </td>
+    <td align="center" width="200">
+      <img src="screenshots/avatar_ben_smith.png" width="96" alt="Ben Smith" /><br />
+      <b>Ben Smith</b><br />
+      <a href="https://linkedin.com/in/benjamin-x-smith-software-eng">LinkedIn</a>
+    </td>
+    <td align="center" width="200">
+      <!-- empty cell to balance the grid -->
+    </td>
+  </tr>
+</table>
 
-| ![Sierra Dugan](screenshots/avatar_sierra_dugan.jpg) |
-| :---: | 
-| Sierra Dugan |
-| [![sierradugandesign](https://raster.shields.io/badge/linkedin-%40sierradugandesign-lightblue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/sierradugandesign/) |
-
-| ![Michael Roth](screenshots/avatar_michael_roth.png) |
-| :---: | 
-| Michael Roth |
-| [![michael-roth](https://raster.shields.io/badge/linkedin-%40michaelroth-lightblue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/michael-roth-7106b91/) |
-
-| ![Jeffrey Berthiaume](screenshots/avatar_jeffrey_berthiaume.png) |
-| :---: | 
-| Jeffrey Berthiaume |
-| [![@jeffreality](https://raster.shields.io/badge/twitter-%40jeffreality-blue?logo=twitter&style=for-the-badge)](https://twitter.com/jeffreality) |
-| [![jeffreality](https://raster.shields.io/badge/linkedin-%40jeffreality-lightblue?logo=linkedin&style=for-the-badge)](https://linkedin.com/in/jeffreality) |
-| [![jeffrey-berthiaume](https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/71607/jeffrey-berthiaume) |
-
-| ![Ben Smith](screenshots/avatar_ben_smith.png) |
-| :---: | 
-| Ben Smith |
-| [![benjamin-x-smith-software-eng](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/benjamin-x-smith-software-eng) |
 
 ## 📖 Citations
 

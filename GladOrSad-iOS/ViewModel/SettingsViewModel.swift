@@ -42,13 +42,14 @@ class SettingsViewModel: ObservableObject {
     private var settings: Settings?
     
     init(settings: Settings){
+        self.settings = settings
         id = settings.id ?? UUID()
         deviceName = settings.deviceName ?? ""
         quizName = settings.quizName ?? ""
         location = settings.location ?? ""
         caption = settings.caption ?? defaultCaption
         prompt = settings.prompt ?? defaultPrompt
-        maxColumns = Int(settings.maxColumns)
+        maxColumns = Int(settings.maxColumns > 0 ? settings.maxColumns : 5) 
 
         captionColor = Color("SWA-White")
         promptColor = Color("SWA-SunriseYellow")
